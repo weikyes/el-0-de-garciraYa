@@ -1,17 +1,22 @@
-const prompt = require("prompt-sync") ({sigint: true})
+const input =require("prompt-sync")({signit: true})
 
-let suma = 0;
+let Cancelar = false
+let numInput
+let num
+let suma = 0
 
-while (true) {
-    let input = prompt("Introduce un numero o cancelar para salir:")
-if(input === "cancelar"){
-    break
+
+while (!Cancelar) {
+    numInput = input ('Dime un numero para sumar-> ')
+
+    if (Number(numInput)) {
+        num = Number(numInput)
+        suma += num
+    }  else if (numInput !=='cancelar'){
+        console.log("Introduce un número")
+    }  else {
+            Cancelar = true
+    }
 }
-let numero
 
-if (numero === Number(input)){
-    alert("No entiendo")
-}
-
-
-console.log("La suma total es " + suma)
+console.log ('La suma es igual a ' + suma)
