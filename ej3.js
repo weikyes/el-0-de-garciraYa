@@ -13,8 +13,5 @@ if (numero === Number(input)){
     alert("No entiendo")
 }
 
-suma += numero
-
-}
 
 console.log("La suma total es " + suma)
